@@ -88,4 +88,4 @@ O desenvolvimento do app será dividido nas seguintes sprints:
 
 ---
 
-> 📌 Este `README.md` será atualizado a cada checkpoint para refletir o andamento do projeto e a implementação das funcionalidades.
+
