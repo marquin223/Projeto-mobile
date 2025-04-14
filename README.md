@@ -48,11 +48,7 @@ As telas prototipadas incluem:
 
 O app utilizará um banco de dados **relacional** local (SQLite) ou uma **API RESTful** para persistência de dados. A modelagem inicial do banco foi feita utilizando o Draw.io.
 
-🔗 [Visualizar Diagrama ER no diagrams.net](https://drive.google.com/file/d/EXEMPLO_DO_LINK)
-
-<!-- Alternativamente, se for imagem:
-![Diagrama ER](https://link-da-imagem-ou-google-drive)
--->
+🔗 [Visualizar Diagrama ER no diagrams.net](https://drive.google.com/file/d/1WnG0KRmsV1joE0zEJAufyuPJakkU6s53/view?usp=sharing)
 
 ### 🗃️ Entidades:
 
