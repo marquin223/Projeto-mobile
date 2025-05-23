@@ -29,9 +29,13 @@ export default function HomeScreen({ navigation }: Props) {
         data={animais}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
-          <View style={styles.item}>
-            <Text>{item.nome}</Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Detalhes", { animal: item })}
+          >
+            <View style={styles.item}>
+              <Text>{item.nome}</Text>
+            </View>
+          </TouchableOpacity>
         )}
       />
     </View>
