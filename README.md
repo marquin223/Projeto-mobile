@@ -72,8 +72,8 @@ O app utilizará um banco de dados **relacional** local (SQLite) ou uma **API RE
 
 O desenvolvimento do app será dividido nas seguintes sprints:
 
-| Sprint | Duração (semana) | Atividades previstas |
-|--------|------------------|----------------------|
+| Sprint | Duração (semana) | Atividades previstas | Detlhes |
+|--------|------------------|----------------------|--------|
 | Sprint 1 | Semana 1 | Planejamento do projeto, definição de funcionalidades, criação dos protótipos no Figma | Concluído |
 | Sprint 2 | Semana 2 | Configuração do ambiente com Expo, criação das rotas e telas básicas | Concluído |
 | Sprint 3 | Semana 3 | Implementação do cadastro de animais e persistência local (SQLite ou AsyncStorage) | Concluído |
