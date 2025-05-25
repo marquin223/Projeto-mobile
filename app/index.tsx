@@ -3,34 +3,34 @@ import {
   View,
   Text,
   FlatList,
-  Button,
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import { useRouter } from "expo-router";
 import { AnimalContext } from "../contexts/AnimalContext";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../types";
-import BotaoPreto from "../components/BotãoPreto";
+import BotaoPreto from "../components/BotaoPreto";
 
-type Props = {
-  navigation: NativeStackNavigationProp<RootStackParamList, "Home">;
-};
-
-export default function HomeScreen({ navigation }: Props) {
+export default function HomeScreen() {
   const { animais } = useContext(AnimalContext);
+  const router = useRouter();
 
   return (
     <View style={styles.container}>
       <BotaoPreto
         title="Cadastrar Animal"
-        onPress={() => navigation.navigate("NovoAnimal", { animal: undefined })}
+        onPress={() => router.push("/novo-animal")}
       />
       <FlatList
         data={animais}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity
-            onPress={() => navigation.navigate("Detalhes", { animal: item })}
+            onPress={() =>
+              router.push({
+                pathname: "/detalhes",
+                params: { nome: item.nome, foto: item.foto },
+              })
+            }
           >
             <View style={styles.item}>
               <Text>{item.nome}</Text>
