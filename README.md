@@ -85,3 +85,33 @@ O desenvolvimento do app será dividido nas seguintes sprints:
 ---
 
 
+## Atualizações desde o último checkpoint
+### 🧱 Melhorias em componentes reutilizáveis
+Foram implementadas boas práticas de criação e organização de componentes, com foco em reutilização, legibilidade e facilidade de manutenção:
+
+✅ Botão Reutilizável (BotaoPreto)
+Criado para padronizar o estilo dos botões do app.
+
+Recebe propriedades (title, onPress) que permitem reutilização em diferentes contextos.
+
+Aplicado em telas como Cadastro de Animal e Listagem.
+
+🔙 Componente de Navegação Voltar (Voltar)
+Criado para encapsular a lógica de retorno à tela anterior.
+
+Usado nas telas Detalhes do Animal e Cadastro de Novo Animal.
+
+Evita repetição de código (router.back()), tornando o app mais coeso.
+
+📐 Boas práticas aplicadas
+Separação de responsabilidades: cada componente realiza apenas uma função específica.
+
+Reutilização e padronização: BotaoPreto e Voltar são usados em múltiplas telas com consistência visual.
+
+Facilidade de manutenção: alterações nos componentes afetam todas as telas em que são usados, reduzindo esforço futuro.
+
+Evita duplicação de lógica: lógica como navegação foi extraída para um único componente (Voltar).
+
+Componentização enxuta: os componentes são pequenos, focados, e fáceis de entender.
+
+
