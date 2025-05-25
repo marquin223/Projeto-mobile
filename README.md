@@ -74,13 +74,13 @@ O desenvolvimento do app será dividido nas seguintes sprints:
 
 | Sprint | Duração (semana) | Atividades previstas |
 |--------|------------------|----------------------|
-| Sprint 1 | Semana 1 | Planejamento do projeto, definição de funcionalidades, criação dos protótipos no Figma |
-| Sprint 2 | Semana 2 | Configuração do ambiente com Expo, criação das rotas e telas básicas |
-| Sprint 3 | Semana 3 | Implementação do cadastro de animais e persistência local (SQLite ou AsyncStorage) |
-| Sprint 4 | Semana 4 | Listagem e visualização de detalhes dos animais |
-| Sprint 5 | Semana 5 | Funcionalidade de edição e exclusão de registros |
-| Sprint 6 | Semana 6 | Testes, melhorias de UI/UX, funcionalidades adicionais (ex: filtro, upload de imagem) |
-| Sprint 7 | Semana 7 | Refatorações, documentação final, entrega do projeto |
+| Sprint 1 | Semana 1 | Planejamento do projeto, definição de funcionalidades, criação dos protótipos no Figma | Concluído |
+| Sprint 2 | Semana 2 | Configuração do ambiente com Expo, criação das rotas e telas básicas | Concluído |
+| Sprint 3 | Semana 3 | Implementação do cadastro de animais e persistência local (SQLite ou AsyncStorage) | Concluído |
+| Sprint 4 | Semana 4 | Listagem e visualização de detalhes dos animais | Concluído |
+| Sprint 5 | Semana 5 | Funcionalidade de edição e exclusão de registros | A fazer |
+| Sprint 6 | Semana 6 | Testes, melhorias de UI/UX, funcionalidades adicionais (ex: filtro, upload de imagem) | A fazer |
+| Sprint 7 | Semana 7 | Refatorações, documentação final, entrega do projeto | A fazer |
 
 ---
 
