@@ -1,19 +1,16 @@
 import React, { useState, useContext } from "react";
-import { View, TextInput, Button, StyleSheet } from "react-native";
+import { View, TextInput, StyleSheet } from "react-native";
 import * as ImagePicker from "expo-image-picker";
+import { useRouter } from "expo-router";
 import { AnimalContext } from "../contexts/AnimalContext";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../types";
-import BotaoPreto from "../components/BotãoPreto";
+import BotaoPreto from "../components/BotaoPreto";
+import Voltar from "../components/Voltar";
 
-type Props = {
-  navigation: NativeStackNavigationProp<RootStackParamList, "NovoAnimal">;
-};
-
-export default function AnimalFormScreen({ navigation }: Props) {
+export default function AnimalFormScreen() {
   const [nome, setNome] = useState("");
   const [foto, setFoto] = useState("");
   const { adicionarAnimal } = useContext(AnimalContext);
+  const router = useRouter();
 
   const selecionarFoto = async () => {
     const result = await ImagePicker.launchImageLibraryAsync({
@@ -29,12 +26,13 @@ export default function AnimalFormScreen({ navigation }: Props) {
   const salvar = () => {
     if (nome.trim()) {
       adicionarAnimal({ nome, foto });
-      navigation.goBack();
+      router.back();
     }
   };
 
   return (
     <View style={styles.container}>
+      <Voltar />
       <TextInput
         style={styles.input}
         placeholder="Nome do animal"
