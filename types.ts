@@ -8,5 +8,4 @@ export type RootStackParamList = {
   Home: undefined;
   NovoAnimal: { animal?: Animal };
   editarAnimal: (animal: Animal) => void;
-  Detalhes: { animal: Animal };
 };
