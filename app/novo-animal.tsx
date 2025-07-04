@@ -9,6 +9,8 @@ import Voltar from "../components/Voltar";
 export default function AnimalFormScreen() {
   const [nome, setNome] = useState("");
   const [foto, setFoto] = useState("");
+  const [especie, setEspecie] = useState("");
+  const [idade, setIdade] = useState("");
   const { adicionarAnimal } = useContext(AnimalContext);
   const router = useRouter();
 
@@ -25,7 +27,7 @@ export default function AnimalFormScreen() {
 
   const salvar = () => {
     if (nome.trim()) {
-      adicionarAnimal({ nome, foto });
+      adicionarAnimal({ nome, foto, especie, idade });
       router.replace("/");
     }
   };
@@ -38,6 +40,18 @@ export default function AnimalFormScreen() {
         placeholder="Nome do animal"
         value={nome}
         onChangeText={setNome}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Especie do animal"
+        value={especie}
+        onChangeText={setEspecie}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Idade do animal"
+        value={idade}
+        onChangeText={setIdade}
       />
       <BotaoPreto title="Selecionar Foto" onPress={selecionarFoto} />
       <BotaoPreto title="Salvar" onPress={salvar} />

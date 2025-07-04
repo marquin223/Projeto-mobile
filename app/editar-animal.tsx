@@ -16,6 +16,8 @@ export default function EditarAnimalScreen() {
 
   const [nomeEditado, setNomeEditado] = useState(animal?.nome || "");
   const [fotoEditada, setFotoEditada] = useState(animal?.foto || "");
+  const [espcieEditada, setEspecieEditada] = useState(animal?.especie || "");
+  const [idadeEditada, setIdadeEditada] = useState(animal?.idade || "");
 
   const selecionarFoto = async () => {
     const result = await ImagePicker.launchImageLibraryAsync({
@@ -34,6 +36,8 @@ export default function EditarAnimalScreen() {
         id: animal.id,
         nome: nomeEditado,
         foto: fotoEditada,
+        especie: espcieEditada,
+        idade: idadeEditada,
       });
       router.replace("/");
     }
@@ -47,6 +51,18 @@ export default function EditarAnimalScreen() {
         placeholder="Nome do animal"
         value={nomeEditado}
         onChangeText={setNomeEditado}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Especie do animal"
+        value={espcieEditada}
+        onChangeText={setEspecieEditada}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Nome do animal"
+        value={idadeEditada}
+        onChangeText={setIdadeEditada}
       />
       <BotaoPreto title="Selecionar Foto" onPress={selecionarFoto} />
       <BotaoPreto title="Salvar Alterações" onPress={salvar} />
