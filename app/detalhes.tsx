@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { View, Text, Image, StyleSheet, Alert, Platform } from "react-native";
-import { View, Text, Image, StyleSheet, Alert } from "react-native";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import Voltar from "../components/Voltar";
 import BotaoPreto from "../components/BotaoPreto";
