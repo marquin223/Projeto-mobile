@@ -79,7 +79,7 @@ O desenvolvimento do app será dividido nas seguintes sprints:
 | Sprint 4 | Semana 4 | Listagem e visualização de detalhes dos animais | Concluído |
 | Sprint 5 | Semana 5 | Funcionalidade de edição e exclusão de registros | Concluído |
 | Sprint 6 | Semana 6 | Testes, melhorias de UI/UX, funcionalidades adicionais (ex: filtro, upload de imagem) | Concluído |
-| Sprint 7 | Semana 7 | Refatorações, documentação final, entrega do projeto | A fazer |
+| Sprint 7 | Semana 7 | Refatorações, documentação final, entrega do projeto | Concluído |
 
 ---
 
