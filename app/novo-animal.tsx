@@ -28,7 +28,6 @@ export default function AnimalFormScreen() {
   const salvar = () => {
     if (nome.trim()) {
       adicionarAnimal({ nome, foto, especie, idade });
-      adicionarAnimal({ nome, foto });
       router.replace("/");
     }
   };
