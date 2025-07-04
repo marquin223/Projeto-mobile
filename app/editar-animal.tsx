@@ -1,16 +1,21 @@
 import React, { useState, useContext } from "react";
 import { View, TextInput, StyleSheet } from "react-native";
 import * as ImagePicker from "expo-image-picker";
-import { useRouter } from "expo-router";
+import { useRouter, useLocalSearchParams } from "expo-router";
 import { AnimalContext } from "../contexts/AnimalContext";
 import BotaoPreto from "../components/BotaoPreto";
 import Voltar from "../components/Voltar";
 
-export default function AnimalFormScreen() {
-  const [nome, setNome] = useState("");
-  const [foto, setFoto] = useState("");
-  const { adicionarAnimal } = useContext(AnimalContext);
+export default function EditarAnimalScreen() {
+  const { id } = useLocalSearchParams();
+  const { animais, editarAnimal } = useContext(AnimalContext);
   const router = useRouter();
+
+  const idFinal = Array.isArray(id) ? id[0] : id;
+  const animal = animais.find((a) => a.id === idFinal);
+
+  const [nomeEditado, setNomeEditado] = useState(animal?.nome || "");
+  const [fotoEditada, setFotoEditada] = useState(animal?.foto || "");
 
   const selecionarFoto = async () => {
     const result = await ImagePicker.launchImageLibraryAsync({
@@ -19,13 +24,17 @@ export default function AnimalFormScreen() {
     });
 
     if (!result.canceled) {
-      setFoto(result.assets[0].uri);
+      setFotoEditada(result.assets[0].uri);
     }
   };
 
   const salvar = () => {
-    if (nome.trim()) {
-      adicionarAnimal({ nome, foto });
+    if (animal) {
+      editarAnimal(animal.id, {
+        id: animal.id,
+        nome: nomeEditado,
+        foto: fotoEditada,
+      });
       router.replace("/");
     }
   };
@@ -36,11 +45,11 @@ export default function AnimalFormScreen() {
       <TextInput
         style={styles.input}
         placeholder="Nome do animal"
-        value={nome}
-        onChangeText={setNome}
+        value={nomeEditado}
+        onChangeText={setNomeEditado}
       />
       <BotaoPreto title="Selecionar Foto" onPress={selecionarFoto} />
-      <BotaoPreto title="Salvar" onPress={salvar} />
+      <BotaoPreto title="Salvar Alterações" onPress={salvar} />
     </View>
   );
 }

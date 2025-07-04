@@ -22,13 +22,13 @@ export default function HomeScreen() {
       />
       <FlatList
         data={animais}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() =>
               router.push({
                 pathname: "/detalhes",
-                params: { nome: item.nome, foto: item.foto },
+                params: { id: item.id },
               })
             }
           >
