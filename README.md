@@ -6,12 +6,11 @@ O aplicativo **Cadastro de Animais** tem como objetivo permitir que usuários ca
 
 ### ✅ Funcionalidades Prioritárias (MVP)
 
-- [ ] Cadastro de animais com nome, espécie, raça, idade e foto
-- [ ] Listagem de animais cadastrados
-- [ ] Visualização detalhada do animal
-- [ ] Edição de dados do animal
-- [ ] Exclusão de animais
-- [ ] Armazenamento local ou remoto dos dados (a definir)
+- [X] Listagem de animais cadastrados
+- [X] Visualização detalhada do animal
+- [X] Edição de dados do animal
+- [X] Exclusão de animais
+- [X] Armazenamento local ou remoto dos dados (a definir)
 
 ### 🔜 Funcionalidades Futuras / Ideias adicionais
 
@@ -78,8 +77,8 @@ O desenvolvimento do app será dividido nas seguintes sprints:
 | Sprint 2 | Semana 2 | Configuração do ambiente com Expo, criação das rotas e telas básicas | Concluído |
 | Sprint 3 | Semana 3 | Implementação do cadastro de animais e persistência local (SQLite ou AsyncStorage) | Concluído |
 | Sprint 4 | Semana 4 | Listagem e visualização de detalhes dos animais | Concluído |
-| Sprint 5 | Semana 5 | Funcionalidade de edição e exclusão de registros | A fazer |
-| Sprint 6 | Semana 6 | Testes, melhorias de UI/UX, funcionalidades adicionais (ex: filtro, upload de imagem) | A fazer |
+| Sprint 5 | Semana 5 | Funcionalidade de edição e exclusão de registros | Concluído |
+| Sprint 6 | Semana 6 | Testes, melhorias de UI/UX, funcionalidades adicionais (ex: filtro, upload de imagem) | Concluído |
 | Sprint 7 | Semana 7 | Refatorações, documentação final, entrega do projeto | A fazer |
 
 ---

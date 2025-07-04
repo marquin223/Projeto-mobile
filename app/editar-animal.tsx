@@ -38,6 +38,7 @@ export default function EditarAnimalScreen() {
         foto: fotoEditada,
         especie: espcieEditada,
         idade: idadeEditada,
+
       });
       router.replace("/");
     }

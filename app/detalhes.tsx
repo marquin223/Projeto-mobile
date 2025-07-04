@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { View, Text, Image, StyleSheet, Alert, Platform } from "react-native";
+import { View, Text, Image, StyleSheet, Alert } from "react-native";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import Voltar from "../components/Voltar";
 import BotaoPreto from "../components/BotaoPreto";
@@ -37,6 +38,17 @@ export default function AnimalDetailsScreen() {
         },
       ]);
     }
+    Alert.alert("Confirmar exclusão", `Excluir ${animal.nome}?`, [
+      { text: "Cancelar", style: "cancel" },
+      {
+        text: "Excluir",
+        style: "destructive",
+        onPress: () => {
+          removerAnimal(animal.id);
+          router.replace("/");
+        },
+      },
+    ]);
   };
 
   const editar = () => {
@@ -55,6 +67,7 @@ export default function AnimalDetailsScreen() {
       )}
       <Text style={styles.opcoes}>{animal.especie}</Text>
       <Text style={styles.opcoes}>{animal.idade}</Text>
+
       <BotaoPreto title="Editar" onPress={editar} />
       <BotaoPreto title="Excluir" onPress={excluir} />
     </View>
