@@ -5,6 +5,8 @@ export type Animal = {
   id: string;
   nome: string;
   foto?: string;
+  especie: string;
+  idade: string;
 };
 
 type AnimalContextType = {
